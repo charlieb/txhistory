@@ -22,13 +22,13 @@ def request(method, rpc_user, rpc_pass, params=[]):
             "id": req_id,
     }
     body = json.dumps(body)
-    print(body)
+    #print(body)
 
     response = requests.post(url, data=body, headers=headers).json()
 
     # Each request must have a different id
     req_id += 1
-    print(response)
+    #print(response)
     return response['result']
 
 def listtransactions(rpc_user, rpc_pass):
